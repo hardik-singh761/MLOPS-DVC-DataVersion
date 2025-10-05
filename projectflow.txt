@@ -2,7 +2,7 @@
 2. Create code.py and add code to it. (it will save a csv file to a new 'data' folder)
 3. Do a git add-commit-push before initializing dvc.
 4. Now we do "dvc init" (creates .dvcignore, .dvc)
-5. Now do "mkdir S3" (creates a new S3 directory)
+5. Now do "mkdir S3" (creates a new S3 directory) (Our S3 will be on AWS not locally.)
 6. Now we do "dvc remote add -d myremote S3"
 7. Next "dvc add data/"
     "it will ask you to remove its tracking from git so DVC can handle it using "git rm -r --cached 'data",
@@ -10,3 +10,6 @@
 8. Again do "dvc add data/" and do git add .
 9. Now "dvc commit" and then "dvc push"
 10. Do a git add-commit-push to mark this stage as first version of data.
+11. Now we make changes to code.py to append data, and check changes via "dvc status".
+12. Again "dvc commit" and "dvc push" 
+13. 
